@@ -5,7 +5,7 @@
 # cache. 
 # If we change the matrix, we flush the cache.
 
-makeCacheMatrix <- function(x) {
+makeCacheMatrix <- function(x=matrix()) {
 # We define a function which returns a list of four functions:
 #   1) set sets the matrix
 #   2) get retrieves the matrix
@@ -25,7 +25,7 @@ makeCacheMatrix <- function(x) {
        getinverse = getinverse)
 }
 
-cacheSolve <- function(x) {
+cacheSolve <- function(x, ...) {
 # We first check if x already has an inverse in its cache.
 # If so, we return the cache. If not, we calculate the inverse
 # and set the cache.
